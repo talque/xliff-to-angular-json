@@ -1,16 +1,27 @@
 {
-  "name": "xliff-to-angular-json",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/node": "^17.0.18",
-    "typescript": "^4.5.5"
-  }
+    "name": "@talque/xliff-to-angular-json",
+    "version": "1.0.0",
+    "description": "",
+    "main": "build/cli.js",
+    "bin": {
+        "xliff-to-angular-json": "./build/cli.js"
+    },
+    "scripts": {
+        "build": "tsc",
+        "publish:npm": "npm run build && npm publish --access public",
+        "test": "mocha test/*"
+    },
+    "keywords": [],
+    "author": "Volker Braun <vbraun.name@gmail.com",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^17.0.18",
+        "@types/yargs": "^17.0.8",
+        "mocha": "^9.2.1",
+        "typescript": "^4.5.5"
+    },
+    "dependencies": {
+        "xliff": "^6.0.1",
+        "yargs": "^17.3.1"
+    }
 }
