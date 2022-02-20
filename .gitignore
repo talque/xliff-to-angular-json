@@ -1,0 +1,14 @@
+.DS_Store
+*~
+*.pyc
+*.bak
+*.sav
+~$*
+\#*\#
+.#*
+.tramp_history
+tags
+/.idea
+
+
+/node_modules/
