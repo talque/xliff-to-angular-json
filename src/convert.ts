@@ -27,7 +27,10 @@ export function xliff2Json(xliff: XliffFile): JsonFile {
 }
 
 
-function xliffTranslation2jsonString(xliff: XliffTranslationArray | XliffTranslationObject | XliffTranslationString): string {
+function xliffTranslation2jsonString(xliff: XliffTranslationArray | XliffTranslationObject | XliffTranslationString | undefined): string {
+    if (xliff === undefined)
+        // translating the empty string (empty source is technically allowed, makes no sense)
+        return '';
     if (typeof xliff === 'string') {
         // translation is plain string without interpolation
         // console.log('translation string', xliff);
